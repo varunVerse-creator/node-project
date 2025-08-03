@@ -1,6 +1,7 @@
 const User = require('../models/userModel')
 const bcrypt = require('bcrypt')
 const json = require('jsonwebtoken')
+const Message = require('../models/message.model')
 require('dotenv').config()
 
 const userSignup = async (req,res)=>{
@@ -121,5 +122,6 @@ const deleteUser = async(req,res) =>{
     console.log(err)
    }
 }
+
 
 module.exports = {userSignup,userLogin,updateUser,deleteUser}
